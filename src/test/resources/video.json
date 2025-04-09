@@ -1,0 +1,23 @@
+{
+  "id" : 123,
+  "title" : "Lion King",
+  "description" : "This is movie description",
+  "youtubeUrl" : "sample youtube url",
+  "url" : "sample url",
+  "duration" : 0,
+  "fileSize" : 2899,
+  "fileType" : "mp4",
+  "videoSetting" : "MOVIE",
+  "privacySetting" : "PRIVATE",
+  "thumbnailUrls" : [ "thumbnail link 1", "thumbnail link 2" ],
+  "tags" : [ {
+    "id" : 1000,
+    "name" : "fishing"
+  }, {
+    "id" : 1001,
+    "name" : "badminton"
+  }, {
+    "id" : 1002,
+    "name" : "reefing"
+  } ]
+}

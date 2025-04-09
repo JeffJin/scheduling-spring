@@ -1,14 +1,15 @@
-package io.eworks.scheduling;
+package io.eworks.scheduling.auth;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class VideoController {
+public class UserController {
 
-    @GetMapping("/")
+    @GetMapping("/users")
     public String index() {
-        return "Greetings from Spring Boot!";
+
+        return "UserController home url";
     }
 
 }

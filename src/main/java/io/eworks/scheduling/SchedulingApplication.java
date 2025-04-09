@@ -1,6 +1,7 @@
 package io.eworks.scheduling;
 
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.ExitCodeGenerator;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -10,6 +11,11 @@ import java.util.Arrays;
 
 @SpringBootApplication
 public class SchedulingApplication {
+
+	@Bean
+	public ExitCodeGenerator exitCodeGenerator() {
+		return () -> 42;
+	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(SchedulingApplication.class, args);
