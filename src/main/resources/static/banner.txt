@@ -1,0 +1,2 @@
+EWOKRS-Scheduling: ${application.version}
+Spring-Boot: ${spring-boot.version}

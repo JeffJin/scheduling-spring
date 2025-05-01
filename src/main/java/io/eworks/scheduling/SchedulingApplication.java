@@ -1,15 +1,18 @@
 package io.eworks.scheduling;
 
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.ExitCodeGenerator;
-import org.springframework.boot.SpringApplication;
+import io.eworks.scheduling.aspects.AspectJConfig;
+import org.springframework.boot.*;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 
 @SpringBootApplication
+@EnableAspectJAutoProxy
 public class SchedulingApplication {
 
 	@Bean
@@ -18,14 +21,19 @@ public class SchedulingApplication {
 	}
 
 	public static void main(String[] args) {
-		SpringApplication.run(SchedulingApplication.class, args);
+		SpringApplication application = new SpringApplication(SchedulingApplication.class);
+		//TODO: WebFlux
+//		application.setWebApplicationType(WebApplicationType.REACTIVE);
+		application.setBannerMode(Banner.Mode.CONSOLE);
+		application.run(args);
+//		SpringApplication.run(SchedulingApplication.class, args);
 	}
 
 	@Bean
 	public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
 		return args -> {
 
-			System.out.println("Let's inspect the beans provided by Spring Boot:");
+			System.out.println("Generic command line runner inside SchedulingApplication");
 
 			String[] beanNames = ctx.getBeanDefinitionNames();
 			Arrays.sort(beanNames);
@@ -36,3 +44,4 @@ public class SchedulingApplication {
 		};
 	}
 }
+

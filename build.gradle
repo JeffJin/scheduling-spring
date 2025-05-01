@@ -24,6 +24,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-hateoas'
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'com.fasterxml.jackson.core:jackson-databind:2.18.3'
+	implementation 'org.aspectj:aspectjweaver:1.9.24'
 	runtimeOnly 'com.h2database:h2'
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
