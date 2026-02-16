@@ -16,7 +16,7 @@ public class VideoController {
 
     @Autowired
     public VideoController(VideoService videoService) {
-        System.out.println("ImageController");
+        System.out.println("VideoController");
         this.videoService = videoService;
     }
 
